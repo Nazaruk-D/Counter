@@ -1,0 +1,58 @@
+span {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.all {
+    display: flex;
+    align-content: space-between;
+
+}
+
+input {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 240px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+
+.counter {
+    /*float: left;*/
+    width: 230px;
+    height: 40px;
+    background-color: rgba(192, 192, 192, 0.8);
+    border: 3px solid #fff;
+    text-align: center;
+    border-radius: 10px;
+    /*padding-bottom: 30px;*/
+    /*padding-left: 20px;*/
+    /*padding-top: 20px;*/
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: 25px;
+}
+
+.blockContent {
+    width: 275px;
+    height: auto; /* Размеры */
+    background: #fc0; /* Цвет фона */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+    margin-top: 250px;
+    margin-left: 600px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.red {
+    color: red
+}
+
+
+
