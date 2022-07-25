@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e8e752-7f7a-4868-aef8-b89502cabefc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Counter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Settings.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Settings.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Project/Todolist",
+    "last_opened_file_path": "C:/Project/Counter/src/Components",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -48,8 +51,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\Counter\src\Components" />
       <recent name="C:\Project\For testing\src" />
       <recent name="C:\Project\For testing\src\Components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Project\Counter\src\Components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,7 +74,7 @@
       <workItem from="1658683022943" duration="66000" />
       <workItem from="1658683134838" duration="248000" />
       <workItem from="1658739053329" duration="615000" />
-      <workItem from="1658767315826" duration="12383000" />
+      <workItem from="1658767315826" duration="15426000" />
     </task>
     <servers />
   </component>
