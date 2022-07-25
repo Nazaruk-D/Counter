@@ -4,7 +4,7 @@ import s from "./Button.module.css"
 type ButtonPropsType = {
     title: string
     callBack: () => void
-    counter: boolean
+    counter?: boolean
 }
 
 export const Button: React.FC<ButtonPropsType> = (props) => {
