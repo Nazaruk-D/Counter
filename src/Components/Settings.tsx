@@ -56,7 +56,7 @@ export const Settings: React.FC<SettingsPropsType> = ({
         setMaxValue(inputValue)
         if (inputValue <= minValue) {
             setCounterDisable(true)
-            setError("Incorrect value")
+            setError("Incorrect max value")
             setDisable(true)
             return
         }
@@ -77,9 +77,10 @@ export const Settings: React.FC<SettingsPropsType> = ({
         let minValueLS = localStorage.getItem("minValue")
         setMinValue(inputValue)
         if (inputValue >= maxValue || inputValue < 0) {
-            setError("Incorrect value")
+            setError("Incorrect min value")
             setCounterDisable(true)
             setDisable(true)
+
             return
         }
         if (inputValue !== Number(minValueLS)) {
@@ -93,24 +94,28 @@ export const Settings: React.FC<SettingsPropsType> = ({
             setCounterDisable(false)
         }
     }
+    const inputMaxClass = error === "Incorrect max value" ? {color: "red", borderColor: "red"} : {color: "black"}
+    const inputMinClass = error === "Incorrect min value" ? {color: "red", borderColor: "red"} : {color: "black"}
 
     return (
         <div className={"blockContent"}>
             <div>
                 <div className={"inputContainer"}>
                     <span className={"textSettings"}>Max value:</span>
-                    <Input error={error}
-                           className={"settings"}
+                    <Input className={"settings"}
                            typeInp={"number"}
                            onChange={onChangeMaxHandler}
-                           valueInp={maxValue}/>
+                           valueInp={maxValue}
+                           inputClass={inputMaxClass}
+                    />
                 </div>
                 <div className={"inputContainer"}>
                     <span className={"textSettings"}>Min value:</span>
-                    <Input error={error} className={"settings"}
+                    <Input className={"settings"}
                            typeInp={"number"}
                            onChange={onChangeMinHandler}
-                           valueInp={minValue}/>
+                           valueInp={minValue}
+                           inputClass={inputMinClass}/>
 
                 </div>
                 <div className={"buttonCounter"}>

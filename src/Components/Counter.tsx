@@ -36,11 +36,14 @@ export const Counter: React.FC<CounterPropsType> = ({
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
     const valueInp = (error: string) => error === "" ? counter : error
+    const inputClass = error || counter === maxValue ? {color: "red", borderColor: "red"} : {color: "white"}
 
     return (
         <div className={"blockContent"}>
             <div>
-                <Input error={error} className={"counter"} valueInp={valueInp(error)} maxValue={maxValue}/>
+                <Input className={"counter"}
+                       valueInp={valueInp(error)}
+                       inputClass={inputClass}/>
                 <div className={"buttonCounter"}>
                     <Button title={"Inc "}
                             callBack={onClickHandler}

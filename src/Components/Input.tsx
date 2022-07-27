@@ -1,16 +1,14 @@
 import React from 'react';
 
 export type InputTypeProps = {
-    error: string
     className: string
     typeInp?: string
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
     valueInp: number | string
-    maxValue?: number
+    inputClass?: { color: string; borderColor?: string;}
 }
 
-export const Input: React.FC<InputTypeProps> = ({error, className, typeInp, onChange, valueInp, maxValue}) => {
-    const inputClass = error || valueInp === maxValue ? {color: "red", borderColor: "red"} : {color: "white"}
+export const Input: React.FC<InputTypeProps> = ({ className, typeInp, onChange, valueInp,inputClass}) => {
     return (
         <div>
             <input className={className} style={inputClass} value={valueInp} onChange={onChange} type={typeInp}/>
