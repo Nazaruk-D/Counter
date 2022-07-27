@@ -14,7 +14,6 @@ export const Button: React.FC<ButtonPropsType> = (props) => {
             return true
         }
     }
-
     return (
         <button onClick={props.callBack} disabled={disableHandler()} className={s.main}>{props.title}</button>
     )

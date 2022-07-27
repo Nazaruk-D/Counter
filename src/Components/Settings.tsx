@@ -19,18 +19,9 @@ type SettingsPropsType = {
 }
 
 export const Settings: React.FC<SettingsPropsType> = ({
-                                                          minValue,
-                                                          maxValue,
-                                                          setMinValue,
-                                                          setMaxValue,
-                                                          setCounter,
-                                                          error,
-                                                          setError,
-                                                          setDisable,
-                                                          disable,
-                                                          setCounterDisable,
+                                                          minValue, maxValue, setMinValue, setMaxValue, setCounter,
+                                                          error, setError, setDisable, disable, setCounterDisable,
                                                       }) => {
-
 
     //Получаем данные при помощи useEffect
     useEffect(() => {
@@ -60,16 +51,16 @@ export const Settings: React.FC<SettingsPropsType> = ({
     // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         debugger
-        const x = Number(e.currentTarget.value)
-        let aaa = localStorage.getItem("maxValue")
-        setMaxValue(x)
-        if (x <= minValue) {
+        const inputValue = Number(e.currentTarget.value)
+        let maxValueLS = localStorage.getItem("maxValue")
+        setMaxValue(inputValue)
+        if (inputValue <= minValue) {
             setCounterDisable(true)
             setError("Incorrect value")
             setDisable(true)
             return
         }
-        if (x !== Number(aaa)) {
+        if (inputValue !== Number(maxValueLS)) {
             setCounterDisable(true)
             setDisable(false)
             setError("Press set")
@@ -82,16 +73,16 @@ export const Settings: React.FC<SettingsPropsType> = ({
     }
     const onChangeMinHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         debugger
-        const x = Number(e.currentTarget.value)
-        let ddd = localStorage.getItem("minValue")
-        setMinValue(x)
-        if (x >= maxValue || x < 0) {
+        const inputValue = Number(e.currentTarget.value)
+        let minValueLS = localStorage.getItem("minValue")
+        setMinValue(inputValue)
+        if (inputValue >= maxValue || inputValue < 0) {
             setError("Incorrect value")
             setCounterDisable(true)
             setDisable(true)
             return
         }
-        if (x !== Number(ddd)) {
+        if (inputValue !== Number(minValueLS)) {
             setCounterDisable(true)
             setDisable(false)
             setError("Press set")
@@ -106,20 +97,26 @@ export const Settings: React.FC<SettingsPropsType> = ({
     return (
         <div className={"blockContent"}>
             <div>
-                <div className={"inputConteiner"}>
+                <div className={"inputContainer"}>
                     <span className={"textSettings"}>Max value:</span>
-                    <Input error={error} className={"settings"} typeInp={"number"} onChange={onChangeMaxHandler} valueInp={maxValue}/>
+                    <Input error={error}
+                           className={"settings"}
+                           typeInp={"number"}
+                           onChange={onChangeMaxHandler}
+                           valueInp={maxValue}/>
                 </div>
-                <div className={"inputConteiner"}>
+                <div className={"inputContainer"}>
                     <span className={"textSettings"}>Min value:</span>
-                    <Input error={error} className={"settings"} typeInp={"number"} onChange={onChangeMinHandler} valueInp={minValue}/>
+                    <Input error={error} className={"settings"}
+                           typeInp={"number"}
+                           onChange={onChangeMinHandler}
+                           valueInp={minValue}/>
 
                 </div>
                 <div className={"buttonCounter"}>
                     <Button title={"Set"}
                             callBack={setHandler}
-                            boolean={disable}
-                    />
+                            boolean={disable}/>
                 </div>
             </div>
         </div>

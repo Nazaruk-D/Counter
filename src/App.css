@@ -11,7 +11,7 @@
     justify-content: space-around;
 }
 
-.inputConteiner {
+.inputContainer {
     width: 275px;
     display: flex;
     justify-content: space-between;
@@ -70,9 +70,6 @@
     padding-bottom: 10px;
 }
 
-.red {
-    color: red
-}
 
 
 
