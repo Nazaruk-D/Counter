@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import s from "./Settings.module.css"
-import {Button} from "./Button";
-import {Input} from "./Input";
+import {Button} from "../Components/Button";
+import {Input} from "../Components/Input";
 
 type SettingsPropsType = {
     minValue: number
@@ -54,6 +54,11 @@ export const Settings: React.FC<SettingsPropsType> = ({
         const inputValue = Number(e.currentTarget.value)
         let maxValueLS = localStorage.getItem("maxValue")
         setMaxValue(inputValue)
+        if (minValue < 0) {
+            setError("Incorrect min value")
+            setDisable(true)
+            return
+        }
         if (inputValue <= minValue) {
             setCounterDisable(true)
             setError("Incorrect max value")
@@ -65,7 +70,9 @@ export const Settings: React.FC<SettingsPropsType> = ({
             setDisable(false)
             setError("Press set")
             return
-        } else {
+        }
+
+        else {
             setError("")
             setDisable(false)
             setCounterDisable(false)
@@ -110,7 +117,7 @@ export const Settings: React.FC<SettingsPropsType> = ({
                     />
                 </div>
                 <div className={"inputContainer"}>
-                    <span className={"textSettings"}>Min value:</span>
+                    <span className={"textSettings"}>Start value:</span>
                     <Input className={"settings"}
                            typeInp={"number"}
                            onChange={onChangeMinHandler}

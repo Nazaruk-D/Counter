@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import s from "./Button.module.css"
-import {Button} from "./Button";
-import {Input} from "./Input";
+import s from "../Components/Button.module.css"
+import {Button} from "../Components/Button";
+import {Input} from "../Components/Input";
 
 type CounterPropsType = {
     minValue: number
