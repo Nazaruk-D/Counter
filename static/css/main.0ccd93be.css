@@ -1,0 +1,14 @@
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;margin:0}code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}.all{align-items:center;display:flex;height:100vh;justify-content:center;width:auto}.buttonCounter{display:flex;justify-content:space-around}.inputContainer{display:flex;justify-content:space-between;padding-bottom:4px;width:275px}.counter{background-color:hsla(0,0%,75%,.8);border:3px solid #fff;border-radius:10px;font-size:25px;height:45px;justify-content:center;margin:10px;padding:10px;text-align:center;width:230px}.counter,.textSettings{align-items:center;display:flex}.textSettings{font-weight:700;padding-left:10px}.settings{background-color:hsla(0,0%,75%,.8);font-size:15px;height:1px;margin:10px 10px 5px;padding:10px;text-align:center;width:120px}.blockContent,.settings{border:3px solid #fff;border-radius:10px}.blockContent{align-content:space-between;background:#fc0;height:130px;margin-left:50px;margin-right:50px;outline:2px solid #000;padding-bottom:10px;padding-left:5px;width:275px}.Button_main__G0dnY,.blockContent{display:flex;justify-content:space-around}.Button_main__G0dnY{-webkit-appearance:none;appearance:none;background-color:#2196f3;border-radius:5px;box-shadow:0 4px 6px rgba(65,132,144,.1),0 1px 3px rgb(0 0 0/8%);box-sizing:border-box;cursor:pointer;margin:7px 5px 5px;outline:none;padding:8px;text-align:center;touch-action:manipulation;transition:background-color 1s linear,color 1s linear;-webkit-user-select:none;user-select:none;vertical-align:top;width:115px}.Button_main__G0dnY:hover{background-color:#3f51b5;color:#fff}.Button_main__G0dnY:disabled{background-color:#2196f3;border-color:#000;color:red;cursor:not-allowed!important}
+/*  !*display: -webkit-box;*!*/
+/*  !*display: -webkit-flex;*!*/
+/*  !*display: -ms-flexbox;*!*/
+/*  !*display: flex;*!*/
+/*  !*-webkit-align-self: center;*!*/
+/*  !*-ms-flex-item-align: center;*!*/
+/*  !*align-self: center;*!*/
+/*  !*margin: 20px;*!*/
+/*  !*padding: 1.2em 2.8em;*!*/
+/*  !*text-align: center;*!*/
+/*  !*margin: 0 auto;*!*/
+/*  !*z-index: 2;*!*/
+/*# sourceMappingURL=main.0ccd93be.css.map*/
