@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import s from "./Settings.module.css"
 import {Button} from "./Button";
+import {Input} from "./Input";
 
 type SettingsPropsType = {
     minValue: number
@@ -15,14 +16,11 @@ type SettingsPropsType = {
     setDisable: (disable: boolean) => void
     counterDisable: boolean
     setCounterDisable: (counterDisable: boolean) => void
-    sErr: string
-    setSErr: (sErr: string) => void
 }
 
 export const Settings: React.FC<SettingsPropsType> = ({
                                                           minValue,
                                                           maxValue,
-                                                          counter,
                                                           setMinValue,
                                                           setMaxValue,
                                                           setCounter,
@@ -30,10 +28,9 @@ export const Settings: React.FC<SettingsPropsType> = ({
                                                           setError,
                                                           setDisable,
                                                           disable,
-                                                          counterDisable,
                                                           setCounterDisable,
-    setSErr,sErr
                                                       }) => {
+
 
     //Получаем данные при помощи useEffect
     useEffect(() => {
@@ -51,7 +48,6 @@ export const Settings: React.FC<SettingsPropsType> = ({
         }
     }, [])
 
-
     //Handlers
     const setHandler = () => {
         localStorage.setItem("minValue", minValue.toString())
@@ -59,9 +55,9 @@ export const Settings: React.FC<SettingsPropsType> = ({
         setCounter(minValue)
         setCounterDisable(false)
         setError("")
-        setSErr("")
     }
 
+    // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         debugger
         const x = Number(e.currentTarget.value)
@@ -84,7 +80,6 @@ export const Settings: React.FC<SettingsPropsType> = ({
             setCounterDisable(false)
         }
     }
-
     const onChangeMinHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         debugger
         const x = Number(e.currentTarget.value)
@@ -108,29 +103,22 @@ export const Settings: React.FC<SettingsPropsType> = ({
         }
     }
 
-
-    //Style
-    const inputClass = error !== "" ? {color: "red", borderColor: "red"} : {color: "white"}
-
-
     return (
         <div className={"blockContent"}>
             <div>
                 <div className={"inputConteiner"}>
                     <span className={"textSettings"}>Max value:</span>
-                    <input className={"settings"} style={inputClass} type={"number"} onChange={onChangeMaxHandler}
-                           value={maxValue}/>
+                    <Input error={error} className={"settings"} typeInp={"number"} onChange={onChangeMaxHandler} valueInp={maxValue}/>
                 </div>
                 <div className={"inputConteiner"}>
                     <span className={"textSettings"}>Min value:</span>
-                    <input className={"settings"} style={inputClass} type={"number"} onChange={onChangeMinHandler}
-                           value={minValue}/>
+                    <Input error={error} className={"settings"} typeInp={"number"} onChange={onChangeMinHandler} valueInp={minValue}/>
+
                 </div>
                 <div className={"buttonCounter"}>
                     <Button title={"Set"}
                             callBack={setHandler}
                             boolean={disable}
-
                     />
                 </div>
             </div>

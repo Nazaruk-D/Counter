@@ -9,7 +9,6 @@
 .buttonCounter {
     display: flex;
     justify-content: space-around;
-    /*align-self: flex-end;*/
 }
 
 .inputConteiner {

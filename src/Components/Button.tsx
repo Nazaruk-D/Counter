@@ -6,12 +6,10 @@ type ButtonPropsType = {
     callBack: () => void
     boolean?: boolean
     counterDisable?: boolean
-    error?: string
 }
 
 export const Button: React.FC<ButtonPropsType> = (props) => {
     const disableHandler = () => {
-        // debugger
         if (props.counterDisable || props.boolean ) {
             return true
         }
