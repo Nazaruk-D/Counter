@@ -7,9 +7,12 @@ type CounterPropsType = {
     maxValue: number
     counter: number
     setCounter: ( counter: number) => void
+    error: string
+    setError: ( error: string) => void
+    // disable: boolean
 }
 
-export const Counter: React.FC<CounterPropsType> = ({minValue, maxValue, counter, setCounter}) => {
+export const Counter: React.FC<CounterPropsType> = ({minValue, maxValue, counter, setCounter, error, setError}) => {
 
     const onClickHandler = () => {
         if (counter < maxValue) {
@@ -20,22 +23,23 @@ export const Counter: React.FC<CounterPropsType> = ({minValue, maxValue, counter
         setCounter(minValue)
     }
 
-
     const inputClass = counter === maxValue ? {color: "red", borderColor: "red"} : {color: "white"}
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
+    const valueInp = (error:string) => error === "" ? counter : error
 
     return (
         <div className={"blockContent"}>
             <div>
-                <div className={"counter"} style={inputClass}>Сlicks: {counter}</div>
+                {/*<div className={"counter"} style={inputClass}>Сlicks: {counter}</div>*/}
+                <input className={"counter"} style={inputClass} value={valueInp(error)}/> {/*value={counter === minValue ? "Clicks: " + counter : error}*/}
                 <div className={"buttonCounter"}>
                     <Button title={"Inc "}
                             callBack={onClickHandler}
-                            counter={addButtonHandler(counter)}/>
+                            boolean={addButtonHandler(counter)}/>
                     <Button title={"Reset"}
                             callBack={onClickClearHandler}
-                            counter={clearButtonHandler(counter)}/>
+                            boolean={clearButtonHandler(counter)}/>
                 </div>
             </div>
         </div>

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e8e752-7f7a-4868-aef8-b89502cabefc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Counter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Settings.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Settings.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Settings.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Project/Counter/src/Components",
+    "last_opened_file_path": "C:/Project/Counter",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -74,7 +73,8 @@
       <workItem from="1658683022943" duration="66000" />
       <workItem from="1658683134838" duration="248000" />
       <workItem from="1658739053329" duration="615000" />
-      <workItem from="1658767315826" duration="15426000" />
+      <workItem from="1658767315826" duration="23055000" />
+      <workItem from="1658908081324" duration="3806000" />
     </task>
     <servers />
   </component>

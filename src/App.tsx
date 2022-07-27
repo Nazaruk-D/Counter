@@ -3,6 +3,7 @@ import './App.css';
 import {Button} from "./Components/Button";
 import {Settings} from "./Components/Settings";
 import {Counter} from "./Components/Counter";
+import {logDOM} from "@testing-library/react";
 
 function App() {
 
@@ -10,11 +11,14 @@ function App() {
     const [minValue, setMinValue] = useState<number>(0)
     const [maxValue, setMaxValue] = useState<number>(5)
     const [counter, setCounter] = useState<number>(minValue)
+    const [error, setError] = useState<string>("")
+
+    // if ()
 
     return (
         <div className={"all"}>
-            <Settings minValue={minValue} maxValue={maxValue} counter={counter} setMinValue={setMinValue} setMaxValue={setMaxValue} setCounter={setCounter}/>
-            <Counter minValue={minValue} maxValue={maxValue} counter={counter} setCounter={setCounter}/>
+            <Settings minValue={minValue} maxValue={maxValue} counter={counter} setMinValue={setMinValue} setMaxValue={setMaxValue} setCounter={setCounter} error={error} setError={setError}/>
+            <Counter minValue={minValue} maxValue={maxValue} counter={counter} setCounter={setCounter} error={error} setError={setError}/>
         </div>
     );
 }

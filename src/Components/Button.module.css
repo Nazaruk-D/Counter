@@ -28,6 +28,7 @@
   background-color: #2196F3;
   color: red;
   border-color: black;
+  cursor: not-allowed! important;
 }
 
 
