@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import s from "./Button.module.css"
 import {Button} from "./Button";
 
@@ -8,11 +8,15 @@ type CounterPropsType = {
     counter: number
     setCounter: ( counter: number) => void
     error: string
-    setError: ( error: string) => void
-    // disable: boolean
+    setError: (error: string) => void
+    counterDisable: boolean
+    setCounterDisable: (counterDisable: boolean) => void
+    sErr: string
+    setSErr: (sErr: string)=> void
 }
 
-export const Counter: React.FC<CounterPropsType> = ({minValue, maxValue, counter, setCounter, error, setError}) => {
+export const Counter: React.FC<CounterPropsType> = ({minValue, maxValue, counter, setCounter, error, setError, counterDisable, setCounterDisable, setSErr,sErr}) => {
+
 
     const onClickHandler = () => {
         if (counter < maxValue) {
@@ -31,15 +35,19 @@ export const Counter: React.FC<CounterPropsType> = ({minValue, maxValue, counter
     return (
         <div className={"blockContent"}>
             <div>
-                {/*<div className={"counter"} style={inputClass}>Сlicks: {counter}</div>*/}
                 <input className={"counter"} style={inputClass} value={valueInp(error)}/> {/*value={counter === minValue ? "Clicks: " + counter : error}*/}
                 <div className={"buttonCounter"}>
                     <Button title={"Inc "}
                             callBack={onClickHandler}
-                            boolean={addButtonHandler(counter)}/>
+                            boolean={addButtonHandler(counter)}
+                            error={error}
+                            counterDisable={counterDisable}/>
                     <Button title={"Reset"}
                             callBack={onClickClearHandler}
-                            boolean={clearButtonHandler(counter)}/>
+                            boolean={clearButtonHandler(counter)}
+                            error={error}
+                            counterDisable={counterDisable}
+                            />
                 </div>
             </div>
         </div>

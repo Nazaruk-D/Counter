@@ -8,15 +8,32 @@ type SettingsPropsType = {
     counter: number
     error: string
     setMinValue: (minValue: number) => void
-    setMaxValue: ( maxValue: number) => void
-    setCounter: ( counter: number) => void
-    setError: (  error: string) => void
+    setMaxValue: (maxValue: number) => void
+    setCounter: (counter: number) => void
+    setError: (error: string) => void
+    disable: boolean
+    setDisable: (disable: boolean) => void
+    counterDisable: boolean
+    setCounterDisable: (counterDisable: boolean) => void
+    sErr: string
+    setSErr: (sErr: string) => void
 }
 
-export const Settings: React.FC<SettingsPropsType> = ({minValue, maxValue, counter, setMinValue, setMaxValue, setCounter, error, setError}) => {
-
-    const [disable, setDisable] = useState<boolean>(false)
-
+export const Settings: React.FC<SettingsPropsType> = ({
+                                                          minValue,
+                                                          maxValue,
+                                                          counter,
+                                                          setMinValue,
+                                                          setMaxValue,
+                                                          setCounter,
+                                                          error,
+                                                          setError,
+                                                          setDisable,
+                                                          disable,
+                                                          counterDisable,
+                                                          setCounterDisable,
+    setSErr,sErr
+                                                      }) => {
 
     //Получаем данные при помощи useEffect
     useEffect(() => {
@@ -34,45 +51,60 @@ export const Settings: React.FC<SettingsPropsType> = ({minValue, maxValue, count
         }
     }, [])
 
-    // useEffect(() => {
-    //     let valueAsString = Number(localStorage.getItem("minValue"))
-    //     if (minValue !== valueAsString) {
-    //         console.log(123)
-    //     }
-    // }, [])
-
 
     //Handlers
     const setHandler = () => {
         localStorage.setItem("minValue", minValue.toString())
         localStorage.setItem("maxValue", maxValue.toString())
         setCounter(minValue)
+        setCounterDisable(false)
+        setError("")
+        setSErr("")
     }
 
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        debugger
         const x = Number(e.currentTarget.value)
+        let aaa = localStorage.getItem("maxValue")
         setMaxValue(x)
         if (x <= minValue) {
+            setCounterDisable(true)
             setError("Incorrect value")
             setDisable(true)
+            return
         }
-        else {
+        if (x !== Number(aaa)) {
+            setCounterDisable(true)
+            setDisable(false)
+            setError("Press set")
+            return
+        } else {
             setError("")
             setDisable(false)
+            setCounterDisable(false)
         }
     }
 
     const onChangeMinHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // debugger
+        debugger
         const x = Number(e.currentTarget.value)
+        let ddd = localStorage.getItem("minValue")
         setMinValue(x)
         if (x >= maxValue || x < 0) {
             setError("Incorrect value")
+            setCounterDisable(true)
             setDisable(true)
+            return
         }
-        else {
+        if (x !== Number(ddd)) {
+            setCounterDisable(true)
+            setDisable(false)
+            setError("Press set")
+            return
+        } else {
             setError("")
             setDisable(false)
+            setCounterDisable(false)
         }
     }
 
@@ -98,7 +130,7 @@ export const Settings: React.FC<SettingsPropsType> = ({minValue, maxValue, count
                     <Button title={"Set"}
                             callBack={setHandler}
                             boolean={disable}
-                            // disable={disable}
+
                     />
                 </div>
             </div>

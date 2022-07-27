@@ -5,12 +5,19 @@ type ButtonPropsType = {
     title: string
     callBack: () => void
     boolean?: boolean
-    disable?: boolean
+    counterDisable?: boolean
+    error?: string
 }
 
 export const Button: React.FC<ButtonPropsType> = (props) => {
-    if (props.disable) {props.boolean = true}
+    const disableHandler = () => {
+        // debugger
+        if (props.counterDisable || props.boolean ) {
+            return true
+        }
+    }
+
     return (
-        <button onClick={props.callBack} disabled={props.boolean} className={s.main}>{props.title}</button>
+        <button onClick={props.callBack} disabled={disableHandler()} className={s.main}>{props.title}</button>
     )
 }
