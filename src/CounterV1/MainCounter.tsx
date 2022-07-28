@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Settings} from "./Settings";
 import {Counter} from "./Counter";
 
-export const MainCounter = () => {
+export const MainCounterV1 = () => {
 
     //Хуки
     const [minValue, setMinValue] = useState<number>(0)
