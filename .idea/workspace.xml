@@ -5,11 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +74,7 @@
       <workItem from="1658683134838" duration="248000" />
       <workItem from="1658739053329" duration="615000" />
       <workItem from="1658767315826" duration="23055000" />
-      <workItem from="1658908081324" duration="34091000" />
+      <workItem from="1658908081324" duration="35655000" />
     </task>
     <servers />
   </component>

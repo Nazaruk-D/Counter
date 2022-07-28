@@ -7,9 +7,10 @@ import {NavLink, Route, Routes} from "react-router-dom";
 function App() {
 
     return (<>
+            <div className={"counterMenu"}>Сounter menu</div>
         <div className={"nav"}>
-           <NavLink to={'/'} className={"nav1v"}>1 вариант</NavLink>
-           <NavLink to={'/option'} className={"nav2v"}>2 вариант</NavLink>
+           <NavLink to={'/'} className={"nav1v"}>First counter</NavLink>
+           <NavLink to={'/option'} className={"nav2v"}>Second counter</NavLink>
         </div>
             <Routes>
                 <Route path={'/'} element={<MainCounter/>}/>
