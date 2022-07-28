@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import s from "./Settings.module.css"
+import React, {useEffect} from "react";
+
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 
