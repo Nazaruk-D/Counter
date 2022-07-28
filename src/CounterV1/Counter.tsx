@@ -12,7 +12,6 @@ type CounterPropsType = {
     setError: (error: string) => void
     counterDisable: boolean
     setCounterDisable: (counterDisable: boolean) => void
-
 }
 
 export const Counter: React.FC<CounterPropsType> = ({
@@ -32,7 +31,6 @@ export const Counter: React.FC<CounterPropsType> = ({
     const onClickClearHandler = () => {
         setCounter(minValue)
     }
-
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
     const valueInp = (error: string) => error === "" ? counter : error

@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 
 type SettingsPropsType = {
     minValue: number
     maxValue: number
-    counter: number
     error: string
     setMinValue: (minValue: number) => void
     setMaxValue: (maxValue: number) => void
@@ -19,24 +18,8 @@ type SettingsPropsType = {
 
 export const Settings: React.FC<SettingsPropsType> = ({
                                                           minValue, maxValue, setMinValue, setMaxValue, setCounter,
-                                                          error, setError, setDisable, disable, setCounterDisable,
+                                                          error, setError, setDisable, disable, setCounterDisable
                                                       }) => {
-
-    //Получаем данные при помощи useEffect
-    useEffect(() => {
-        let valueAsString = localStorage.getItem("maxValue")
-        if (valueAsString) {
-            let newMaxValue = JSON.parse(valueAsString)
-            setMaxValue(newMaxValue)
-        }
-    }, [])
-    useEffect(() => {
-        let valueAsString = localStorage.getItem("minValue")
-        if (valueAsString) {
-            let newMinValue = JSON.parse(valueAsString)
-            setMinValue(newMinValue)
-        }
-    }, [])
 
     //Handlers
     const setHandler = () => {
@@ -47,9 +30,10 @@ export const Settings: React.FC<SettingsPropsType> = ({
         setError("")
     }
 
+
     // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        debugger
+        // debugger
         const inputValue = Number(e.currentTarget.value)
         let maxValueLS = localStorage.getItem("maxValue")
         setMaxValue(inputValue)
@@ -78,7 +62,7 @@ export const Settings: React.FC<SettingsPropsType> = ({
         }
     }
     const onChangeMinHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        debugger
+        // debugger
         const inputValue = Number(e.currentTarget.value)
         let minValueLS = localStorage.getItem("minValue")
         setMinValue(inputValue)

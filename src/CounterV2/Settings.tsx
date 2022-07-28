@@ -1,5 +1,4 @@
-import React, {useEffect} from "react";
-
+import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 
@@ -14,29 +13,22 @@ type SettingsPropsType = {
     disable: boolean
     setDisable: (disable: boolean) => void
     setCounterDisable: (counterDisable: boolean) => void
-    setChangeCounter: (changeCounter:boolean) => void
+    setChangeCounter: (changeCounter: boolean) => void
 }
 
 export const Settings: React.FC<SettingsPropsType> = ({
-                                                          minValue, maxValue, setMinValue, setMaxValue, setCounter,
-                                                          error, setError, setDisable, disable, setCounterDisable,setChangeCounter,
+                                                          minValue,
+                                                          maxValue,
+                                                          setMinValue,
+                                                          setMaxValue,
+                                                          setCounter,
+                                                          error,
+                                                          setError,
+                                                          setDisable,
+                                                          disable,
+                                                          setCounterDisable,
+                                                          setChangeCounter,
                                                       }) => {
-
-    //Получаем данные при помощи useEffect
-    useEffect(() => {
-        let valueAsString = localStorage.getItem("maxValue")
-        if (valueAsString) {
-            let newMaxValue = JSON.parse(valueAsString)
-            setMaxValue(newMaxValue)
-        }
-    }, [])
-    useEffect(() => {
-        let valueAsString = localStorage.getItem("minValue")
-        if (valueAsString) {
-            let newMinValue = JSON.parse(valueAsString)
-            setMinValue(newMinValue)
-        }
-    }, [])
 
     //Handlers
     const setHandler = () => {
@@ -51,7 +43,7 @@ export const Settings: React.FC<SettingsPropsType> = ({
 
     // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        debugger
+        // debugger
         const inputValue = Number(e.currentTarget.value)
         let maxValueLS = localStorage.getItem("maxValue")
         setMaxValue(inputValue)
@@ -71,16 +63,14 @@ export const Settings: React.FC<SettingsPropsType> = ({
             setDisable(false)
             setError("Press set")
             return
-        }
-
-        else {
+        } else {
             setError("")
             setDisable(false)
             setCounterDisable(false)
         }
     }
     const onChangeMinHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        debugger
+        // debugger
         const inputValue = Number(e.currentTarget.value)
         let minValueLS = localStorage.getItem("minValue")
         setMinValue(inputValue)

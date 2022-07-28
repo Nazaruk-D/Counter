@@ -10,11 +10,11 @@ function App() {
             <div className={"counterMenu"}>Сounter menu</div>
         <div className={"nav"}>
            <NavLink to={'/'} className={"nav1v"}>First counter</NavLink>
-           <NavLink to={'/option'} className={"nav2v"}>Second counter</NavLink>
+           <NavLink to={'/option2'} className={"nav2v"}>Second counter</NavLink>
         </div>
             <Routes>
                 <Route path={'/'} element={<MainCounter/>}/>
-                <Route path={'/option'} element={<MainCounterV2/>}/>
+                <Route path={'/option2'} element={<MainCounterV2/>}/>
             </Routes>
         </>
     );

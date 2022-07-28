@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 
@@ -10,7 +10,7 @@ type CounterPropsType = {
     error: string
     counterDisable: boolean
     disable: boolean
-    setChangeCounter: (changeCounter:boolean) => void
+    setChangeCounter: (changeCounter: boolean) => void
 
 }
 
@@ -36,8 +36,6 @@ export const Counter: React.FC<CounterPropsType> = ({
     const setHandler = () => {
         setChangeCounter(false)
     }
-
-
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
     const valueInp = (error: string) => error === "" ? counter : error
@@ -60,9 +58,7 @@ export const Counter: React.FC<CounterPropsType> = ({
                     <Button title={"Reset"}
                             callBack={onClickClearHandler}
                             boolean={clearButtonHandler(counter)}
-                            counterDisable={counterDisable}
-                    />
-
+                            counterDisable={counterDisable}/>
                 </div>
             </div>
         </div>
