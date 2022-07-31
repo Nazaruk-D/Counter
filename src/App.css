@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.nav1v {
+.navA {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,27 +34,7 @@
     text-decoration: none;
 }
 
-.nav1v:hover {
-    background-color: #3F51B5;
-    color: white;
-}
-
-.nav2v {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 10vh;
-    font-family: "Arial";
-    cursor: pointer;
-    touch-action: manipulation;
-    background-color: #2196F3;
-    transition: background-color 1s linear, color 1s linear;
-    text-decoration: none;
-}
-
-
-.nav2v:hover {
+.navA:hover {
     background-color: #3F51B5;
     color: white;
 }

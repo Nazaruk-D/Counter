@@ -1,5 +1,4 @@
 import React from "react";
-
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 
@@ -9,9 +8,10 @@ type CounterPropsType = {
     counter: number
     setCounter: (counter: number) => void
     error: string
-    setError: (error: string) => void
     counterDisable: boolean
-    setCounterDisable: (counterDisable: boolean) => void
+    disable: boolean
+    setChangeCounter: (changeCounter: boolean) => void
+
 }
 
 export const Counter: React.FC<CounterPropsType> = ({
@@ -21,6 +21,8 @@ export const Counter: React.FC<CounterPropsType> = ({
                                                         setCounter,
                                                         error,
                                                         counterDisable,
+                                                        disable,
+                                                        setChangeCounter,
                                                     }) => {
 
     const onClickHandler = () => {
@@ -30,6 +32,9 @@ export const Counter: React.FC<CounterPropsType> = ({
     }
     const onClickClearHandler = () => {
         setCounter(minValue)
+    }
+    const setHandler = () => {
+        setChangeCounter(false)
     }
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
@@ -47,11 +52,13 @@ export const Counter: React.FC<CounterPropsType> = ({
                             callBack={onClickHandler}
                             boolean={addButtonHandler(counter)}
                             counterDisable={counterDisable}/>
+                    <Button title={"Set"}
+                            callBack={setHandler}
+                            boolean={disable}/>
                     <Button title={"Reset"}
                             callBack={onClickClearHandler}
                             boolean={clearButtonHandler(counter)}
-                            counterDisable={counterDisable}
-                    />
+                            counterDisable={counterDisable}/>
                 </div>
             </div>
         </div>

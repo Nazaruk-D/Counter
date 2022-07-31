@@ -12,22 +12,13 @@ type SettingsPropsType = {
     setError: (error: string) => void
     disable: boolean
     setDisable: (disable: boolean) => void
+    counterDisable: boolean
     setCounterDisable: (counterDisable: boolean) => void
-    setChangeCounter: (changeCounter: boolean) => void
 }
 
 export const Settings: React.FC<SettingsPropsType> = ({
-                                                          minValue,
-                                                          maxValue,
-                                                          setMinValue,
-                                                          setMaxValue,
-                                                          setCounter,
-                                                          error,
-                                                          setError,
-                                                          setDisable,
-                                                          disable,
-                                                          setCounterDisable,
-                                                          setChangeCounter,
+                                                          minValue, maxValue, setMinValue, setMaxValue, setCounter,
+                                                          error, setError, setDisable, disable, setCounterDisable
                                                       }) => {
 
     //Handlers
@@ -37,9 +28,8 @@ export const Settings: React.FC<SettingsPropsType> = ({
         setCounter(minValue)
         setCounterDisable(false)
         setError("")
-        setChangeCounter(true)
-
     }
+
 
     // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -63,7 +53,9 @@ export const Settings: React.FC<SettingsPropsType> = ({
             setDisable(false)
             setError("Press set")
             return
-        } else {
+        }
+
+        else {
             setError("")
             setDisable(false)
             setCounterDisable(false)
@@ -78,6 +70,7 @@ export const Settings: React.FC<SettingsPropsType> = ({
             setError("Incorrect min value")
             setCounterDisable(true)
             setDisable(true)
+
             return
         }
         if (inputValue !== Number(minValueLS)) {

@@ -11,6 +11,7 @@ export const MainCounterV1 = () => {
     const [error, setError] = useState<string>("")
     const [disable, setDisable] = useState<boolean>(false)
     const [counterDisable, setCounterDisable] = useState<boolean>(false)
+    const [changeCounter, setChangeCounter] = useState<boolean>(true)
 
     //Вносим данные при помощи useEffect
     useEffect(() => {
@@ -37,12 +38,14 @@ export const MainCounterV1 = () => {
 
     return (
         <div className={"all"}>
-            <Settings minValue={minValue} maxValue={maxValue} setMinValue={setMinValue}
-                      setMaxValue={setMaxValue} setCounter={setCounter} error={error} setError={setError}
-                      setDisable={setDisable} disable={disable} counterDisable={counterDisable}
-                      setCounterDisable={setCounterDisable}/>
-            <Counter minValue={minValue} maxValue={maxValue} counter={counter} setCounter={setCounter} error={error}
-                     setError={setError} counterDisable={counterDisable} setCounterDisable={setCounterDisable}/>
+            {!changeCounter &&
+                <Settings minValue={minValue} maxValue={maxValue} setMinValue={setMinValue}
+                          setMaxValue={setMaxValue} setCounter={setCounter} error={error} setError={setError}
+                          setDisable={setDisable} disable={disable}
+                          setCounterDisable={setCounterDisable} setChangeCounter={setChangeCounter}/>}
+            {changeCounter &&
+                <Counter minValue={minValue} maxValue={maxValue} counter={counter} setCounter={setCounter} error={error}
+                         counterDisable={counterDisable} disable={disable} setChangeCounter={setChangeCounter}/>}
         </div>
     );
 }
