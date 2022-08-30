@@ -2,8 +2,7 @@ import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 import {useDispatch} from "react-redux";
-import {IncrAC, setChangeCounterAC, setMinValueAC} from "../redux/counterReducer";
-import {CounterPropsType} from "../App";
+import {CounterPropsType, IncrAC, setChangeCounterAC, setMinValueAC} from "../redux/counterReducer";
 
 // type CounterPropsType = {
 //     minValue: number

@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export type counterPropsType = {
+export type CounterPropsType = {
     minValue: number
     maxValue: number
     counter: number
@@ -20,38 +20,41 @@ type SetChangeCounterType = {
 type SetMinValueType = {
     type: "SET-MIN-VALUE"
 }
-
 type SetMaxValueType = {
     type: "SET-MAX-VALUE"
     inputValue: number
 }
-
 type SetErrType = {
     type: "SET-ERR"
     textErr: string
 }
-
 type SetDisableType = {
     type: "SET-DISABLE"
     disable: boolean
 }
-
 type SetCounterDisableType = {
     type: "SET-COUNTER-DISABLE"
     disable: boolean
 }
-
 type SetCounterType = {
     type: "SET-COUNTER"
 }
-
 type ChangeMinValueType = {
     type: "CHANGE-MINVALUE"
     inputValue: number
 }
 
 
-type ActionType = IncrType | SetChangeCounterType | SetMinValueType | SetMaxValueType | SetErrType | SetDisableType | SetCounterDisableType | SetCounterType | ChangeMinValueType
+type ActionType =
+    IncrType
+    | SetChangeCounterType
+    | SetMinValueType
+    | SetMaxValueType
+    | SetErrType
+    | SetDisableType
+    | SetCounterDisableType
+    | SetCounterType
+    | ChangeMinValueType
 
 
 let initialState = {
@@ -64,7 +67,7 @@ let initialState = {
     changeCounter: true
 }
 
-export const countReducer = (state: counterPropsType = initialState, action: ActionType): counterPropsType => {
+export const countReducer = (state: CounterPropsType = initialState, action: ActionType): CounterPropsType => {
     switch (action.type) {
         case "INCR":
             return {...state, counter: state.counter + 1}
@@ -91,12 +94,12 @@ export const countReducer = (state: counterPropsType = initialState, action: Act
 
 
 export const IncrAC = (): IncrType => ({type: "INCR"})
-export const setChangeCounterAC = (setFalse:boolean): SetChangeCounterType => ({type: "SET-CHANGE-COUNTER", setFalse})
+export const setChangeCounterAC = (setFalse: boolean): SetChangeCounterType => ({type: "SET-CHANGE-COUNTER", setFalse})
 export const setMinValueAC = (): SetMinValueType => ({type: "SET-MIN-VALUE"})
 export const setMaxValueAC = (inputValue: number): SetMaxValueType => ({type: "SET-MAX-VALUE", inputValue})
 export const setErrorAC = (textErr: string): SetErrType => ({type: "SET-ERR", textErr})
 export const setDisableAC = (disable: boolean): SetDisableType => ({type: "SET-DISABLE", disable})
 export const setCounterDisableAC = (disable: boolean): SetCounterDisableType => ({type: "SET-COUNTER-DISABLE", disable})
 export const setCounterAC = (): SetCounterType => ({type: "SET-COUNTER"})
-export const ChangeMinValueAC = (inputValue:number): ChangeMinValueType => ({type: "CHANGE-MINVALUE", inputValue})
+export const ChangeMinValueAC = (inputValue: number): ChangeMinValueType => ({type: "CHANGE-MINVALUE", inputValue})
 

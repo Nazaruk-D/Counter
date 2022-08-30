@@ -1,6 +1,6 @@
 import {
     ChangeMinValueAC,
-    counterPropsType,
+    CounterPropsType,
     countReducer,
     IncrAC,
     setChangeCounterAC, setCounterAC, setCounterDisableAC, setDisableAC, setErrorAC,
@@ -8,7 +8,7 @@ import {
     setMinValueAC
 } from "./counterReducer";
 
-let initialState: counterPropsType
+let initialState: CounterPropsType
 
 beforeEach(()=>{
     initialState = {

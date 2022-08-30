@@ -1,10 +1,9 @@
 import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
-import {CounterPropsType} from "../App";
 import {useDispatch} from "react-redux";
 import {
-    ChangeMinValueAC,
+    ChangeMinValueAC, CounterPropsType,
     setChangeCounterAC, setCounterAC,
     setCounterDisableAC,
     setDisableAC,
@@ -27,12 +26,11 @@ import {
 // }
 
 export const Settings: React.FC<CounterPropsType> = ({
-                                                          minValue,
-                                                          maxValue,
-                                                          error,
-                                                          disable,
-
-                                                      }) => {
+                                                         minValue,
+                                                         maxValue,
+                                                         error,
+                                                         disable,
+                                                     }) => {
 
     //Handlers
     const setHandler = () => {
@@ -104,9 +102,9 @@ export const Settings: React.FC<CounterPropsType> = ({
 
 
     const dispatch = useDispatch()
+
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         // debugger
-
         const inputValue = Number(e.currentTarget.value)
         // let maxValueLS = localStorage.getItem("maxValue")
         // setMaxValue(inputValue)
@@ -122,7 +120,7 @@ export const Settings: React.FC<CounterPropsType> = ({
             // setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
             // setError("Incorrect max value")
-            dispatch(setErrorAC("Incorrect min value"))
+            dispatch(setErrorAC("Incorrect max value"))
             // setDisable(true)
             dispatch(setDisableAC(true))
             return
@@ -131,7 +129,7 @@ export const Settings: React.FC<CounterPropsType> = ({
             // setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
             // setDisable(false)
-            dispatch(setDisableAC(true))
+            dispatch(setDisableAC(false))
             // setError("Press set")
             dispatch(setErrorAC("Press set"))
             return
@@ -160,8 +158,8 @@ export const Settings: React.FC<CounterPropsType> = ({
             return
         }
         if (inputValue !== Number(minValueLS)) {
-     // if (inputValue !== Number(minValueLS)) { ??? тоже изменил логику
-     //        setCounterDisable(true)
+            // if (inputValue !== Number(minValueLS)) { ??? тоже изменил логику
+            //        setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
             // setDisable(false)
             dispatch(setDisableAC(false))
@@ -177,8 +175,6 @@ export const Settings: React.FC<CounterPropsType> = ({
             dispatch(setCounterDisableAC(false))
         }
     }
-
-
 
     const inputMaxClass = error === "Incorrect max value" ? {color: "red", borderColor: "red"} : {color: "black"}
     const inputMinClass = error === "Incorrect min value" ? {color: "red", borderColor: "red"} : {color: "black"}

@@ -2,36 +2,30 @@ import React from "react";
 
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
+import {CounterPropsType, IncrAC, setCounterAC} from "../redux/counterReducer";
+import {useDispatch} from "react-redux";
 
-type CounterPropsType = {
-    minValue: number
-    maxValue: number
-    counter: number
-    setCounter: (counter: number) => void
-    error: string
-    setError: (error: string) => void
-    counterDisable: boolean
-    setCounterDisable: (counterDisable: boolean) => void
-}
 
 export const Counter: React.FC<CounterPropsType> = ({
                                                         minValue,
                                                         maxValue,
                                                         counter,
-                                                        setCounter,
                                                         error,
                                                         counterDisable,
                                                     }) => {
 
+    const dispatch = useDispatch()
+
     const onClickHandler = () => {
         if (counter < maxValue) {
-            setCounter(counter + 1);
+            // setCounter(counter + 1);
+            dispatch(IncrAC())
         }
     }
 
-    // const onClickClearHandler = () => {
-    //     setCounter(minValue)
-    // }
+    const onClickResetHandler = () => {
+        dispatch(setCounterAC())
+    }
 
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
@@ -50,7 +44,7 @@ export const Counter: React.FC<CounterPropsType> = ({
                             boolean={addButtonHandler(counter)}
                             counterDisable={counterDisable}/>
                     <Button title={"Reset"}
-                            callBack={() => setCounter(minValue)}
+                            callBack={onClickResetHandler}
                             boolean={clearButtonHandler(counter)}
                             counterDisable={counterDisable}
                     />

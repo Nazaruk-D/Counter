@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e8e752-7f7a-4868-aef8-b89502cabefc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/counterReducer.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/counterReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" afterDir="false" />
@@ -15,8 +10,8 @@
       <change beforePath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/counterReducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/counterReducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/counterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/counterReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +157,7 @@
       <workItem from="1660048552533" duration="1027000" />
       <workItem from="1660058391037" duration="598000" />
       <workItem from="1661237418896" duration="347000" />
-      <workItem from="1661841610296" duration="12666000" />
+      <workItem from="1661841610296" duration="15218000" />
     </task>
     <servers />
   </component>

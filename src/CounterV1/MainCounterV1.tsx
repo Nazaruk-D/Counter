@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Settings} from "./Settings";
 import {Counter} from "./Counter";
-import {useSelector} from "react-redux";
-import {AppStateType} from "../redux/store";
+import {CounterPropsType} from "../redux/counterReducer";
 
 type MainCounterV1Type = {
     counter: number
@@ -14,7 +13,15 @@ type MainCounterV1Type = {
     counterDisable: boolean
 }
 
-export const MainCounterV1: React.FC<MainCounterV1Type> = ({minValue, maxValue, counter, error, changeCounter, counterDisable, disable}) => {
+export const MainCounterV1: React.FC<CounterPropsType> = ({
+                                                              minValue,
+                                                              maxValue,
+                                                              counter,
+                                                              error,
+                                                              changeCounter,
+                                                              counterDisable,
+                                                              disable
+                                                          }) => {
 
     //Хуки
     // const [minValue, setMinValue] = useState<number>(0)
@@ -51,10 +58,11 @@ export const MainCounterV1: React.FC<MainCounterV1Type> = ({minValue, maxValue, 
     return (
         <div className={"all"}>
             {!changeCounter &&
-                <Settings minValue={minValue} maxValue={maxValue} error={error} disable={disable} counter={counter} counterDisable={counterDisable}/>}
+                <Settings minValue={minValue} maxValue={maxValue} error={error} disable={disable} counter={counter}
+                          counterDisable={counterDisable} changeCounter={changeCounter}/>}
             {changeCounter &&
                 <Counter minValue={minValue} maxValue={maxValue} counter={counter} error={error}
-                         counterDisable={counterDisable} disable={disable}/>}
+                         counterDisable={counterDisable} disable={disable} changeCounter={changeCounter}/>}
         </div>
     );
 }
