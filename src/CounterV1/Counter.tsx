@@ -1,45 +1,49 @@
 import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
+import {useDispatch} from "react-redux";
+import {IncrAC, setChangeCounterAC, setMinValueAC} from "../redux/counterReducer";
+import {CounterPropsType} from "../App";
 
-type CounterPropsType = {
-    minValue: number
-    maxValue: number
-    counter: number
-    setCounter: (counter: number) => void
-    error: string
-    counterDisable: boolean
-    disable: boolean
-    setChangeCounter: (changeCounter: boolean) => void
-
-}
+// type CounterPropsType = {
+//     minValue: number
+//     maxValue: number
+//     counter: number
+//     error: string
+//     counterDisable: boolean
+//     disable: boolean
+// }
 
 export const Counter: React.FC<CounterPropsType> = ({
                                                         minValue,
                                                         maxValue,
                                                         counter,
-                                                        setCounter,
                                                         error,
                                                         counterDisable,
                                                         disable,
-                                                        setChangeCounter,
                                                     }) => {
 
-    const onClickHandler = () => {
-        if (counter < maxValue) {
-            setCounter(counter + 1);
-        }
-    }
-    const onClickClearHandler = () => {
-        setCounter(minValue)
-    }
-    const setHandler = () => {
-        setChangeCounter(false)
-    }
+    const dispatch = useDispatch()
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
     const valueInp = (error: string) => error === "" ? counter : error
     const inputClass = error || counter === maxValue ? {color: "red", borderColor: "red"} : {color: "white"}
+
+    const onClickHandler = () => {
+        if (counter < maxValue) {
+            // setCounter(counter + 1);
+            dispatch(IncrAC())
+        }
+    }
+    const onClickClearHandler = () => {
+        // setCounter(minValue)
+        dispatch(setMinValueAC())
+    }
+    const setHandler = () => {
+        // setChangeCounter(false)
+        dispatch(setChangeCounterAC(false))
+    }
+
 
     return (
         <div className={"blockContent"}>

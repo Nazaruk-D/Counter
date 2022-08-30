@@ -13,27 +13,32 @@ export const MainCounterV2 = () => {
     const [counterDisable, setCounterDisable] = useState<boolean>(false)
 
     //Вносим данные при помощи useEffect
+    // useEffect(() => {
+    //     if (valueAsString) {
+    //         let newMaxValue = JSON.parse(valueAsString)
+    //         setMaxValue(newMaxValue)
+    //     }
+    // }, [])
+
     useEffect(() => {
-        let valueAsString = localStorage.getItem("maxValue")
-        if (valueAsString) {
-            let newMaxValue = JSON.parse(valueAsString)
-            setMaxValue(newMaxValue)
-        }
-    }, [])
-    useEffect(() => {
+        let getMaxValueAsString =  localStorage.getItem("maxValue")
         let valueAsString = localStorage.getItem("minValue")
-        if (valueAsString) {
+        if (valueAsString && getMaxValueAsString) {
             let newMinValue = JSON.parse(valueAsString)
+            let newMaxvalue = JSON.parse(valueAsString)
             setMinValue(newMinValue)
-        }
-    }, [])
-    useEffect(() => {
-        let valueAsString = localStorage.getItem("minValue")
-        if (valueAsString) {
-            let newMinValue = JSON.parse(valueAsString)
+            setMaxValue(newMaxvalue)
             setCounter(newMinValue)
         }
     }, [])
+
+    // useEffect(() => {
+    //     let valueAsString = localStorage.getItem("minValue")
+    //     if (valueAsString) {
+    //         let newMinValue = JSON.parse(valueAsString)
+    //         setCounter(newMinValue)
+    //     }
+    // }, [])
 
     return (
         <div className={"all"}>

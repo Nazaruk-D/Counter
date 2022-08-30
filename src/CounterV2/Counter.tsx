@@ -28,9 +28,11 @@ export const Counter: React.FC<CounterPropsType> = ({
             setCounter(counter + 1);
         }
     }
-    const onClickClearHandler = () => {
-        setCounter(minValue)
-    }
+
+    // const onClickClearHandler = () => {
+    //     setCounter(minValue)
+    // }
+
     const addButtonHandler = (counter: number) => counter === maxValue
     const clearButtonHandler = (counter: number) => counter !== maxValue
     const valueInp = (error: string) => error === "" ? counter : error
@@ -48,7 +50,7 @@ export const Counter: React.FC<CounterPropsType> = ({
                             boolean={addButtonHandler(counter)}
                             counterDisable={counterDisable}/>
                     <Button title={"Reset"}
-                            callBack={onClickClearHandler}
+                            callBack={() => setCounter(minValue)}
                             boolean={clearButtonHandler(counter)}
                             counterDisable={counterDisable}
                     />

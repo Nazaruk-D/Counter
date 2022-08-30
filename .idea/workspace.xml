@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e8e752-7f7a-4868-aef8-b89502cabefc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/counterReducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/counterReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +48,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Project/samurai-way",
+    "last_opened_file_path": "C:/Project/Todolist",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/Project/Counter/node_modules/react-scripts",
     "nodejs_package_manager_path": "yarn",
     "settings.editor.selected.configurable": "preferences.editor",
     "ts.external.directory.path": "C:\\Project\\Counter\\node_modules\\typescript\\lib",
@@ -46,6 +60,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\Counter\src\redux" />
       <recent name="C:\Project\Counter\src\CounterV2" />
       <recent name="C:\Project\Counter\src\Components" />
       <recent name="C:\Project\For testing\src" />
@@ -55,6 +70,68 @@
       <recent name="C:\Project\Counter\src\CounterV1" />
       <recent name="C:\Project\Counter\src\Components" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.Should be changed maxValue">
+    <configuration name="Counter must increase by one " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/counterReducer.test.ts" />
+      <test-names>
+        <test-name value="Counter must increase by one " />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Counter should be set minValue" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/counterReducer.test.ts" />
+      <test-names>
+        <test-name value="Counter should be set minValue" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Should be changed maxValue" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/counterReducer.test.ts" />
+      <test-names>
+        <test-name value="Should be changed maxValue" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="changeCounter should be false" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/counterReducer.test.ts" />
+      <test-names>
+        <test-name value="changeCounter should be false" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Should be changed maxValue" />
+        <item itemvalue="Jest.Counter should be set minValue" />
+        <item itemvalue="Jest.changeCounter should be false" />
+        <item itemvalue="Jest.Counter must increase by one " />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,6 +155,14 @@
       <workItem from="1659264077666" duration="1718000" />
       <workItem from="1659272453838" duration="2261000" />
       <workItem from="1659276494693" duration="194000" />
+      <workItem from="1659278894475" duration="1162000" />
+      <workItem from="1659358908368" duration="384000" />
+      <workItem from="1659364850419" duration="18000" />
+      <workItem from="1660037760767" duration="18000" />
+      <workItem from="1660048552533" duration="1027000" />
+      <workItem from="1660058391037" duration="598000" />
+      <workItem from="1661237418896" duration="347000" />
+      <workItem from="1661841610296" duration="12666000" />
     </task>
     <servers />
   </component>

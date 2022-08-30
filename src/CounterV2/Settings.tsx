@@ -33,7 +33,6 @@ export const Settings: React.FC<SettingsPropsType> = ({
 
     // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // debugger
         const inputValue = Number(e.currentTarget.value)
         let maxValueLS = localStorage.getItem("maxValue")
         setMaxValue(inputValue)
