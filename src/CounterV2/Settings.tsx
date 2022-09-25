@@ -27,11 +27,6 @@ export const Settings: React.FC<SettingsPropsType> = ({
     //Handlers
     const dispatch = useDispatch()
     const setHandler = () => {
-        // localStorage.setItem("minValue", minValue.toString())
-        // localStorage.setItem("maxValue", maxValue.toString())
-        // setCounter(minValue)
-        // setCounterDisable(false)
-        // setError("")
         dispatch(setMinValueAC())
         dispatch(setCounterDisableAC(false))
         dispatch(setErrorAC(""))
@@ -41,73 +36,47 @@ export const Settings: React.FC<SettingsPropsType> = ({
     // Logics
     const onChangeMaxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = Number(e.currentTarget.value)
-        // let maxValueLS = localStorage.getItem("maxValue")
-        // setMaxValue(inputValue)
         dispatch(setMaxValueAC(inputValue))
         if (minValue < 0) {
-            // setError("Incorrect min value")
             dispatch(setErrorAC("Incorrect min value"))
             // setDisable(true)
             dispatch(setDisableAC(true))
             return
         }
         if (inputValue <= minValue) {
-            // setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
-            // setError("Incorrect max value")
             dispatch(setErrorAC("Incorrect max value"))
-            // setDisable(true)
             dispatch(setDisableAC(true))
             return
         }
         if (inputValue !== Number(maxValue)) {
-            // setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
-            // setDisable(false)
             dispatch(setDisableAC(false))
-            // setError("Press set")
             dispatch(setErrorAC("Press set"))
             return
-        }
-
-        else {
-            // setError("")
+        } else {
             dispatch(setErrorAC(""))
-            // setDisable(false)
             dispatch(setDisableAC(false))
-            // setCounterDisable(false)
             dispatch(setCounterDisableAC(false))
         }
     }
     const onChangeMinHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // debugger
         const inputValue = Number(e.currentTarget.value)
-        // let minValueLS = localStorage.getItem("minValue")
-        // setMinValue(inputValue)
         dispatch(changeMinValueAC(inputValue))
         if (inputValue >= maxValue || inputValue < 0) {
-            // setError("Incorrect min value")
             dispatch(setErrorAC("Incorrect min value"))
-            // setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
-            // setDisable(true)
             dispatch(setDisableAC(true))
             return
         }
         if (inputValue !== Number(minValue)) {
-            // setCounterDisable(true)
             dispatch(setCounterDisableAC(true))
-            // setDisable(false)
             dispatch(setDisableAC(false))
-            // setError("Press set")
             dispatch(setErrorAC("Press set"))
             return
         } else {
-            // setError("")
             dispatch(setErrorAC(""))
-            // setDisable(false)
             dispatch(setDisableAC(false))
-            // setCounterDisable(false)
             dispatch(setCounterDisableAC(false))
         }
     }

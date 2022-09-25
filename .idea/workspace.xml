@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e8e752-7f7a-4868-aef8-b89502cabefc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/localStorage/localStorage-utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/counterReducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/counterReducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/counterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/counterReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +166,7 @@
       <workItem from="1661875823957" duration="631000" />
       <workItem from="1663010705779" duration="944000" />
       <workItem from="1663012777275" duration="723000" />
-      <workItem from="1664093504533" duration="7191000" />
+      <workItem from="1664093504533" duration="9867000" />
     </task>
     <servers />
   </component>

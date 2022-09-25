@@ -20,7 +20,7 @@ function App() {
 
     useEffect( () => {
         dispatch(fetchStartCounterAC(minValue))
-    }, [])
+    }, [dispatch, minValue])
 
     return (<>
             <div className={"counterMenu"}>Сounter menu</div>
