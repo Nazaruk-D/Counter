@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import {MainCounterV1} from "./CounterV1/MainCounterV1";
 import {MainCounterV2} from "./CounterV2/MainCounterV2";
 import {NavLink, Route, Routes} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "./redux/store";
+import {fetchStartCounterAC} from "./redux/counterReducer";
 
 
 function App() {
-
     let counter = useSelector<AppStateType, number>(state => state.counter.counter)
     let minValue = useSelector<AppStateType, number>(state => state.counter.minValue)
     let maxValue = useSelector<AppStateType, number>(state => state.counter.maxValue)
@@ -16,6 +16,11 @@ function App() {
     let changeCounter = useSelector<AppStateType, boolean>(state => state.counter.changeCounter)
     let disable = useSelector<AppStateType, boolean>(state => state.counter.disable)
     let counterDisable = useSelector<AppStateType, boolean>(state => state.counter.counterDisable)
+    const dispatch = useDispatch()
+
+    useEffect( () => {
+        dispatch(fetchStartCounterAC(minValue))
+    }, [])
 
     return (<>
             <div className={"counterMenu"}>Сounter menu</div>

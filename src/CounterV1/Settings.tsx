@@ -3,12 +3,12 @@ import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 import {useDispatch} from "react-redux";
 import {
-    ChangeMinValueAC, CounterPropsType,
-    setChangeCounterAC, setCounterAC,
+    changeMinValueAC, CounterPropsType,
+    setChangeCounterAC,
     setCounterDisableAC,
     setDisableAC,
     setErrorAC,
-    setMaxValueAC
+    setMaxValueAC, setMinValueAC
 } from "../redux/counterReducer";
 
 // type SettingsPropsType = {
@@ -37,7 +37,7 @@ export const Settings: React.FC<CounterPropsType> = ({
         // localStorage.setItem("minValue", minValue.toString())
         // localStorage.setItem("maxValue", maxValue.toString())
         // setCounter(minValue)
-        dispatch(setCounterAC())
+        dispatch(setMinValueAC())
         // setCounterDisable(false)
         dispatch(setCounterDisableAC(false))
         // setError("")
@@ -147,7 +147,7 @@ export const Settings: React.FC<CounterPropsType> = ({
         const inputValue = Number(e.currentTarget.value)
         let minValueLS = localStorage.getItem("minValue")
         // setMinValue(inputValue)\
-        dispatch(ChangeMinValueAC(inputValue))
+        dispatch(changeMinValueAC(inputValue))
         if (inputValue >= maxValue || inputValue < 0) {
             // setError("Incorrect min value")
             dispatch(setErrorAC("Incorrect min value"))

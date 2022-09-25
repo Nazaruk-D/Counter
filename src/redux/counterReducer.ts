@@ -1,66 +1,8 @@
-import {useState} from "react";
-
-export type CounterPropsType = {
-    minValue: number
-    maxValue: number
-    counter: number
-    error: string
-    disable: boolean
-    counterDisable: boolean
-    changeCounter: boolean
-}
-
-type IncrType = {
-    type: "INCR"
-}
-type SetChangeCounterType = {
-    type: "SET-CHANGE-COUNTER"
-    setFalse: boolean
-}
-type SetMinValueType = {
-    type: "SET-MIN-VALUE"
-}
-type SetMaxValueType = {
-    type: "SET-MAX-VALUE"
-    inputValue: number
-}
-type SetErrType = {
-    type: "SET-ERR"
-    textErr: string
-}
-type SetDisableType = {
-    type: "SET-DISABLE"
-    disable: boolean
-}
-type SetCounterDisableType = {
-    type: "SET-COUNTER-DISABLE"
-    disable: boolean
-}
-type SetCounterType = {
-    type: "SET-COUNTER"
-}
-type ChangeMinValueType = {
-    type: "CHANGE-MINVALUE"
-    inputValue: number
-}
-
-
-type ActionType =
-    IncrType
-    | SetChangeCounterType
-    | SetMinValueType
-    | SetMaxValueType
-    | SetErrType
-    | SetDisableType
-    | SetCounterDisableType
-    | SetCounterType
-    | ChangeMinValueType
-
 
 let initialState = {
     minValue: 0,
     maxValue: 5,
-    counter: 1,
+    counter: 0,
     error: "",
     disable: false,
     counterDisable: false,
@@ -83,23 +25,43 @@ export const countReducer = (state: CounterPropsType = initialState, action: Act
             return {...state, disable: action.disable}
         case "SET-COUNTER-DISABLE":
             return {...state, counterDisable: action.disable}
-        case "SET-COUNTER":
-            return {...state, counter: state.minValue}
         case "CHANGE-MINVALUE":
             return {...state, minValue: action.inputValue}
+        case "SET-COUNTER":
+            return {...state, counter: action.value}
         default:
             return state
     }
 }
 
+export const incrAC = ()=> ({type: "INCR"} as const)
+export const setChangeCounterAC = (setFalse: boolean) => ({type: "SET-CHANGE-COUNTER", setFalse} as const)
+export const setMinValueAC = () => ({type: "SET-MIN-VALUE"} as const)
+export const setMaxValueAC = (inputValue: number) => ({type: "SET-MAX-VALUE", inputValue} as const)
+export const setErrorAC = (textErr: string) => ({type: "SET-ERR", textErr} as const)
+export const setDisableAC = (disable: boolean) => ({type: "SET-DISABLE", disable} as const)
+export const setCounterDisableAC = (disable: boolean) => ({type: "SET-COUNTER-DISABLE", disable} as const)
+export const changeMinValueAC = (inputValue: number) => ({type: "CHANGE-MINVALUE", inputValue} as const)
+export const fetchStartCounterAC = (value: number) => ({type: "SET-COUNTER", value} as const)
 
-export const IncrAC = (): IncrType => ({type: "INCR"})
-export const setChangeCounterAC = (setFalse: boolean): SetChangeCounterType => ({type: "SET-CHANGE-COUNTER", setFalse})
-export const setMinValueAC = (): SetMinValueType => ({type: "SET-MIN-VALUE"})
-export const setMaxValueAC = (inputValue: number): SetMaxValueType => ({type: "SET-MAX-VALUE", inputValue})
-export const setErrorAC = (textErr: string): SetErrType => ({type: "SET-ERR", textErr})
-export const setDisableAC = (disable: boolean): SetDisableType => ({type: "SET-DISABLE", disable})
-export const setCounterDisableAC = (disable: boolean): SetCounterDisableType => ({type: "SET-COUNTER-DISABLE", disable})
-export const setCounterAC = (): SetCounterType => ({type: "SET-COUNTER"})
-export const ChangeMinValueAC = (inputValue: number): ChangeMinValueType => ({type: "CHANGE-MINVALUE", inputValue})
 
+//types
+export type CounterPropsType = {
+    minValue: number
+    maxValue: number
+    counter: number
+    error: string
+    disable: boolean
+    counterDisable: boolean
+    changeCounter: boolean
+}
+type ActionType =
+    ReturnType<typeof setChangeCounterAC>
+    | ReturnType<typeof incrAC>
+    | ReturnType<typeof setMinValueAC>
+    | ReturnType<typeof setMaxValueAC>
+    | ReturnType<typeof setErrorAC>
+    | ReturnType<typeof setDisableAC>
+    | ReturnType<typeof setCounterDisableAC>
+    | ReturnType<typeof changeMinValueAC>
+    | ReturnType<typeof fetchStartCounterAC>

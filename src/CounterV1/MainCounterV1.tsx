@@ -3,15 +3,15 @@ import {Settings} from "./Settings";
 import {Counter} from "./Counter";
 import {CounterPropsType} from "../redux/counterReducer";
 
-type MainCounterV1Type = {
-    counter: number
-    minValue: number
-    maxValue: number
-    error: string
-    changeCounter: boolean
-    disable: boolean
-    counterDisable: boolean
-}
+// type MainCounterV1Type = {
+//     counter: number
+//     minValue: number
+//     maxValue: number
+//     error: string
+//     changeCounter: boolean
+//     disable: boolean
+//     counterDisable: boolean
+// }
 
 export const MainCounterV1: React.FC<CounterPropsType> = ({
                                                               minValue,

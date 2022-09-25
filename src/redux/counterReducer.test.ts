@@ -1,9 +1,9 @@
 import {
-    ChangeMinValueAC,
+    changeMinValueAC,
     CounterPropsType,
     countReducer,
-    IncrAC,
-    setChangeCounterAC, setCounterAC, setCounterDisableAC, setDisableAC, setErrorAC,
+    incrAC,
+    setChangeCounterAC, setCounterDisableAC, setDisableAC, setErrorAC,
     setMaxValueAC,
     setMinValueAC
 } from "./counterReducer";
@@ -23,7 +23,7 @@ beforeEach(()=>{
 })
 
 test("Counter should be increase by one", () => {
-    const endState = countReducer(initialState, IncrAC())
+    const endState = countReducer(initialState, incrAC())
     expect(endState.counter).toBe(2);
 })
 
@@ -62,12 +62,12 @@ test("CounterDisable status should be changed", () => {
 })
 
 test("Counter should be equals minValue", () => {
-    const endState = countReducer(initialState, setCounterAC())
+    const endState = countReducer(initialState, setMinValueAC())
     expect(endState.counter).toBe(0);
 })
 
 test("MinValue should be changes", () => {
     let inputValue = 3;
-    const endState = countReducer(initialState, ChangeMinValueAC(inputValue))
+    const endState = countReducer(initialState, changeMinValueAC(inputValue))
     expect(endState.minValue).toBe(3);
 })

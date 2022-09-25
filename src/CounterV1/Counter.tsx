@@ -2,7 +2,7 @@ import React from "react";
 import {Button} from "../Components/Button";
 import {Input} from "../Components/Input";
 import {useDispatch} from "react-redux";
-import {CounterPropsType, IncrAC, setChangeCounterAC, setMinValueAC} from "../redux/counterReducer";
+import {CounterPropsType, incrAC, setChangeCounterAC, setMinValueAC} from "../redux/counterReducer";
 
 // type CounterPropsType = {
 //     minValue: number
@@ -31,7 +31,7 @@ export const Counter: React.FC<CounterPropsType> = ({
     const onClickHandler = () => {
         if (counter < maxValue) {
             // setCounter(counter + 1);
-            dispatch(IncrAC())
+            dispatch(incrAC())
         }
     }
     const onClickClearHandler = () => {
