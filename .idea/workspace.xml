@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d1e8e752-7f7a-4868-aef8-b89502cabefc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/MainCounterV1.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV1/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/MainCounterV2.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CounterV2/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,21 +31,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Project/Todolist",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs.jest.jest_package": "C:/Project/Counter/node_modules/react-scripts",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "ts.external.directory.path": "C:\\Project\\Counter\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Project/Counter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;C:/Project/Counter/node_modules/react-scripts&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Project\\Counter\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Project\Counter\src\redux" />
@@ -166,7 +160,13 @@
       <workItem from="1661875823957" duration="631000" />
       <workItem from="1663010705779" duration="944000" />
       <workItem from="1663012777275" duration="723000" />
-      <workItem from="1664093504533" duration="9867000" />
+      <workItem from="1664093504533" duration="9919000" />
+      <workItem from="1664176750033" duration="261000" />
+      <workItem from="1664967500648" duration="624000" />
+      <workItem from="1665071402827" duration="10000" />
+      <workItem from="1665157416718" duration="679000" />
+      <workItem from="1665164176924" duration="117000" />
+      <workItem from="1665237373951" duration="607000" />
     </task>
     <servers />
   </component>

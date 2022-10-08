@@ -29,9 +29,9 @@ function App() {
             <NavLink to={'/Counter2'} className={"navA"} style={(params)=>{return {color: params.isActive ? 'gold' : "white"}}}>Second counter</NavLink>
         </div>
             <Routes>
-                <Route path={'/*'}/>
-                <Route path={'/Counter/*'} element={<MainCounterV1 counter={counter} error={error} maxValue={maxValue} minValue={minValue} changeCounter={changeCounter} counterDisable={counterDisable} disable={disable}/>}/>
-                <Route path={'/Counter2/*'} element={<MainCounterV2 counter={counter} error={error} maxValue={maxValue} minValue={minValue} changeCounter={changeCounter} counterDisable={counterDisable} disable={disable}/>}/>
+                {/*<Route path={'/*'}/>*/}
+                <Route path={'/Counter'} element={<MainCounterV1 counter={counter} error={error} maxValue={maxValue} minValue={minValue} changeCounter={changeCounter} counterDisable={counterDisable} disable={disable}/>}/>
+                <Route path={'/Counter2'} element={<MainCounterV2 counter={counter} error={error} maxValue={maxValue} minValue={minValue} changeCounter={changeCounter} counterDisable={counterDisable} disable={disable}/>}/>
                 <Route path={"*"} element={<MainCounterV1 counter={counter} error={error} maxValue={maxValue} minValue={minValue} changeCounter={changeCounter} counterDisable={counterDisable} disable={disable}/>} />
             </Routes>
         </>
